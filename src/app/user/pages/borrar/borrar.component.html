@@ -1,0 +1,7 @@
+<h1>Borrar usuarios en lista</h1>
+
+<ul *ngFor="let item of delUser">
+    <li>ID: {{ item.id }}</li>
+    <li>Usuario: {{ item.username }}</li>
+    <p><button (click)="delete(item.id, item.name)">Eliminar usuario</button></p>
+</ul>

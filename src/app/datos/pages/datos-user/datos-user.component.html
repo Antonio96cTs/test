@@ -1,0 +1,14 @@
+<p>datos-user works!</p>
+
+<ul *ngFor="let item of datos">
+    <li>ID: {{ item.id }}</li>
+    <li>Nombre: {{ item.name }}</li>
+    <li>Email: {{ item.email }}</li>
+    <li>Telefono: {{ item.phone }}</li>
+    <li>Direccion:</li>
+    <ul>
+        <li>Calle: {{ item.address.street }}</li>
+        <li>Ciudad: {{ item.address.city }}</li>
+        <li>CP: {{ item.address.zipcode }}</li>
+    </ul>
+</ul>
