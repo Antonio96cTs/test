@@ -1,7 +1,11 @@
 <h2>Lista de usuarios</h2>
 
-<ul *ngFor="let item of users">
-    <li>ID: {{ item.id }}</li>
-    <li>Usuario: {{ item.username }}</li>
-    <li>Email: {{ item.email }}</li>
-</ul>
+<mat-grid-list cols="3">
+    <mat-grid-tile *ngFor="let item of users">
+        <mat-list>
+            <mat-list-item>Id: {{ item.id }}</mat-list-item>
+            <mat-list-item>Usuario: {{ item.username }}</mat-list-item>
+            <mat-list-item>Email: {{ item.email }}</mat-list-item>
+        </mat-list> 
+    </mat-grid-tile>
+</mat-grid-list>

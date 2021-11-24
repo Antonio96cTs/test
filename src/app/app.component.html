@@ -1,13 +1,9 @@
 <h1>Contenido app component</h1>
 
-<ul>
-  <li><a routerLink="/user/listas">Listas usuarios</a></li>
-  <ul>
-    <li><a routerLink="/datos/datosUser">Datos usuarios</a></li>
-    <!-- <li><a routerLink="/datos/litadoDatosUser">Listado de datos</a></li>-->
-  </ul>
-  <li><a routerLink="/user/borrar">Borrar</a></li>
-  <li><a routerLink="/user/create">Crear/Modificar</a></li>
-</ul>
+<mat-list class="mat-list">
+  <mat-list-item><a routerLink="/user/listas">Listas usuarios</a></mat-list-item>
+  <mat-list-item><a routerLink="/datos/datosUser">Datos usuarios</a></mat-list-item>
+  <mat-list-item><a routerLink="/user/create">Crear</a></mat-list-item>
+</mat-list>
 
 <router-outlet></router-outlet>

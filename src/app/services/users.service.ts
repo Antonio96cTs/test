@@ -9,7 +9,6 @@ import { environment } from 'src/environments/environment';
 })
 export class UsersService {
 
-
   constructor(private http: HttpClient) { }
 
   getUsers(): Observable<Users[]> {
@@ -20,7 +19,7 @@ export class UsersService {
     return this.http.delete(`${environment.api}/${id}`);
   }
 
-  createUser(user: Users): Observable<Users> {
+  pushUser(user: Users): Observable<Users> {
     return this.http.post<Users>(environment.api, user);
   }
 

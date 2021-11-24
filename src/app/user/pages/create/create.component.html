@@ -1,21 +1,49 @@
-<h1>Crear y modificar usuarios</h1>
-<div>
-    <form>
-        <label for="name">Nombre: </label>
-        <input type="text" required name="name"/>
-        <label for="username">Usuario: </label>
-        <input type="text" required name="username" />
-        <label for="email">Email: </label>
-        <input type="text" required name="email" />
-        <label for="Direccion">Direccion</label><br>
-        <label for="calle">Calle: </label>
-        <input type="text" required name="calle" />
-        <label for="ciudad">Ciudad: </label>
-        <input type="text" required name="ciudad" />
-        <label for="cp">Codigo postal: </label>
-        <input type="number" required name="cp" />
-        <label for="telefono">Telefono: </label>
-        <input type="number" required name="telefono" />
-        <button>Crear usuario</button>
-    </form>
-</div>
+<h2>Crear y modificar usuarios</h2>
+
+<form #searchChar="ngForm" class="form_create">
+    <!-- Busqueda By Name -->
+    <div class="">
+        <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label for="name">Nombre: </mat-label>
+            <input matInput type="text" required name="name" [(ngModel)]="charName" #name="ngModel"/>
+        </mat-form-field>
+    </div>
+    <!-- Busqueda By Id -->
+    <div class="">
+        <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label for="usuario">Usuario: </mat-label>
+            <input matInput type="text" required name="usuario" [(ngModel)]="charUser" #id="ngModel"/>
+        </mat-form-field>
+    </div>
+    <div class="">
+        <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label for="email">Email: </mat-label>
+            <input matInput type="text" required name="email" [(ngModel)]="charEmail" #id="ngModel"/>
+        </mat-form-field>
+    </div>
+    <div class="">
+        <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label for="calle">Calle: </mat-label>
+            <input matInput type="text" required name="calle" [(ngModel)]="charCalle" #id="ngModel"/>
+        </mat-form-field>
+    </div>
+    <div class="">
+        <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label for="ciudad">Ciudad: </mat-label>
+            <input matInput type="text" required name="ciudad" [(ngModel)]="charCiudad" #id="ngModel"/>
+        </mat-form-field>
+    </div>
+    <div class="">
+        <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label for="cp">Codigo postal: </mat-label>
+            <input matInput type="number" required name="cp" [(ngModel)]="charCp" #id="ngModel"/>
+        </mat-form-field>
+    </div>
+    <div class="">
+        <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label for="telefono">Telefono: </mat-label>
+            <input matInput type="number" required name="telefono" [(ngModel)]="charTelefono" #id="ngModel"/>
+        </mat-form-field>
+    </div>
+    <button mat-button color="primary" (click)='createUser()' class="example-full-width">Crear usuario</button>
+</form>

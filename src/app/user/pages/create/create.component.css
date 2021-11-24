@@ -1,0 +1,10 @@
+
+.example-full-width {
+    width: 85%;
+    margin: 5px;
+}
+
+.form_create {
+    display: flex;
+    flex-direction: column;
+}
